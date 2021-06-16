@@ -21,8 +21,7 @@ while True:
                         
        print( Back.GREEN )
        print( Fore.BLACK )
-       fr=0
-       to=0
+     
        if person ==  "woman" : 
               if height >= 150:
                  fr = height * 0.24
@@ -59,15 +58,15 @@ while True:
        engine.say("Your weight matches these numbers?")
        engine.runAndWait()
 
-       LOL = input("Your weight matches these numbers?(yes or no)")
+       LOL = input(str("Your weight matches these numbers?(yes or no)"))
 
        if LOL == "yes" :
            engine = pyttsx3.init()
            engine.say("You are perfect!")
            engine.runAndWait()
            print("You are perfect!")
-           again = input("again?()")
-           if again == "again":
+           again = input("again?(yes or no)")
+           if again == "yes":
                continue
            else:
               break
@@ -79,13 +78,13 @@ while True:
            engine.say("Your weight?")
            engine.runAndWait()
 
-       weith = float( input("Your weight?"))
-       if weith < fr:
+       weight = float( input("Your weight?"))
+       if weight < fr:
            engine = pyttsx3.init()
            engine.say("Then, you have to eat more and sleep more!")
            engine.runAndWait()
            print("Then, you have to eat more and sleep more!")
-       if weith > to:
+       if weight  > to:
            engine = pyttsx3.init()
            engine.say("Then, you have to eat less and work harder!")
            engine.runAndWait()
@@ -93,10 +92,9 @@ while True:
        engine = pyttsx3.init()
        engine.say("Again or more?")
        engine.runAndWait()
-       again = input("again?")
-       if again == "again":
-               continue
-       else:
+       again = input("again? (yes or no)")
+       if again == "no":
               break
               input()
               quit()
+
